@@ -43,14 +43,14 @@ jobs:
          
        - name: Push to Docker Hub Container Registry
          run: 
-            docker tag ${{  secrets.DOCKER_USERNAME  }}/naming-server:${{github.run_id}} ${{  secrets.DOCKER_USERNAME  }}/naming-server:0.0.1-SNAPSHOT 
-            docker tag ${{  secrets.DOCKER_USERNAME  }}/api-gateway:${{github.run_id}} ${{  secrets.DOCKER_USERNAME  }}/api-gateway:0.0.1-SNAPSHOT
-            docker tag ${{  secrets.DOCKER_USERNAME  }}/cambio-service:${{github.run_id}} ${{  secrets.DOCKER_USERNAME  }}/cambio-service:latest
-            docker tag ${{  secrets.DOCKER_USERNAME  }}/book-service:${{github.run_id}} ${{  secrets.DOCKER_USERNAME  }}/book-service:latest
-            docker push ${{  secrets.DOCKER_USERNAME  }}/naming-server:${{github.run_id}}
-            docker push ${{  secrets.DOCKER_USERNAME  }}/api-gateway:${{github.run_id}}
-            docker push ${{  secrets.DOCKER_USERNAME  }}/cambio-service:${{github.run_id}}
-            docker push ${{  secrets.DOCKER_USERNAME  }}/book-service:${{github.run_id}}
+            docker tag marcusfurtuoso/naming-server:0.0.1-SNAPSHOT marcusfurtuoso/naming-server:${{github.run_id}}
+            docker tag marcusfurtuoso/api-gateway:0.0.1-SNAPSHOT marcusfurtuoso/api-gateway:${{github.run_id}}
+            docker tag marcusfurtuoso/cambio-service:latest marcusfurtuoso/cambio-service:${{github.run_id}}
+            docker tag marcusfurtuoso/book-service:latest marcusfurtuoso/book-service:${{github.run_id}}
+            docker push marcusfurtuoso/naming-server:${{github.run_id}}
+            docker push marcusfurtuoso/api-gateway:${{github.run_id}}
+            docker push marcusfurtuoso/cambio-service:${{github.run_id}}
+            docker push marcusfurtuoso/book-service:${{github.run_id}}
          
          
          
