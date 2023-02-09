@@ -43,10 +43,10 @@ jobs:
          
        - name: Push to Docker Hub Container Registry
          run: 
-            docker tag marcusfurtuoso[:naming-server:0.0.1-SNAPSHOT] marcusfurtuoso[:naming-server:${{github.run_id}}]
-            docker tag marcusfurtuoso[:api-gateway:0.0.1-SNAPSHOT] marcusfurtuoso[:api-gateway:${{github.run_id}}]
-            docker tag marcusfurtuoso[:cambio-service:latest] marcusfurtuoso[:cambio-service:${{github.run_id}}]
-            docker tag marcusfurtuoso[:book-service:latest] marcusfurtuoso[:book-service:${{github.run_id}}]
+            docker tag marcusfurtuoso/[:naming-server:0.0.1-SNAPSHOT] marcusfurtuoso/[:naming-server:${{github.run_id}}]
+            docker tag marcusfurtuoso/[:api-gateway:0.0.1-SNAPSHOT] marcusfurtuoso/[:api-gateway:${{github.run_id}}]
+            docker tag marcusfurtuoso/[:cambio-service:latest] marcusfurtuoso/[:cambio-service:${{github.run_id}}]
+            docker tag marcusfurtuoso/[:book-service:latest] marcusfurtuoso/[:book-service:${{github.run_id}}]
             docker push marcusfurtuoso/naming-server:${{github.run_id}}
             docker push marcusfurtuoso/api-gateway:${{github.run_id}}
             docker push marcusfurtuoso/cambio-service:${{github.run_id}}
